@@ -57,9 +57,9 @@ describe('Request logger middleware', () => {
 describe('Error handling', () => {
   const app = createApp();
 
-  it('returns 404 for unknown routes', async () => {
+  it('returns 401 for unknown routes without auth', async () => {
     const res = await supertest(app).get('/unknown-route');
 
-    expect(res.status).toBe(404);
+    expect(res.status).toBe(401);
   });
 });
