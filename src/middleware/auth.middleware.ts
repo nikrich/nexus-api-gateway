@@ -8,7 +8,7 @@ interface AuthToken {
   role: string;
 }
 
-const PUBLIC_PATHS = ['/health', '/api/auth/'];
+const PUBLIC_PATHS = ['/health', '/api/auth/', '/docs'];
 
 function isPublicPath(path: string): boolean {
   return PUBLIC_PATHS.some((prefix) => path === prefix || path.startsWith(prefix));
